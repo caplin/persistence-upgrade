@@ -17,7 +17,7 @@ public class CliArgs {
     @Parameter(names={"--converters", "-c"}, description = "List of class names to be used for conversion of persisted data")
     public List<String> converterClasses = Arrays.asList(WatchlistConverter.class.getName(), RecordConverter.class.getName(), NotificationConverter.class.getName(), HighLowConverter.class.getName());
 
-    @Parameter(names={"--filedb"}, description = "Whether to read data from a folder or a DB", required = true)
+    @Parameter(names={"--filedb"}, description = "Whether to read data from a folder or a DB")
     public boolean fromFileDb = false;
 
     @Parameter(names={"--folder", "-f"}, description = "Folder to read persistence files from")
@@ -38,7 +38,7 @@ public class CliArgs {
     @Parameter(names={"--table"}, description = "Name of the database table to read data from")
     public String tableName;
 
-    @Parameter(names={"--key"}, description = "The key and value column for the table specified in --table. Key column must be named first", arity = 2)
+    @Parameter(names={"--columns"}, description = "The key and value column for the table specified in --table. Key column must be named first", arity = 2)
     public List<String> columns;
 
     @Parameter(names = "--help", help = true, description = "Print this help text")
