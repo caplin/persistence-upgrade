@@ -80,7 +80,7 @@ public class UpgradeTool {
         Connection connection = DriverManager.getConnection(jdbcURL, username, password);
 
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + tableName + ";");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + tableName);
 
 
         while(resultSet.next()) {
