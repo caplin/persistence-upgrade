@@ -16,9 +16,12 @@ java -jar build/libs/upgradeTool-0.1.jar --filedb --folder <path_to_persistence_
 ```
 
 ### JavaDb
-To run the upgrade tool with jdbc mode, a JDBC Driver needs to be supplied and made available on the classpath in addition to specifying the correct arguments
+To run the upgrade tool with jdbc mode, a JDBC Driver needs to be supplied and made available on the classpath in addition to specifying the correct arguments. 
 ```bash
-java -classpath <path_to_jdbc_driver> -jar build/libs/upgradeTool-0.1.jar --driver <driverName> --url <jdbc url> --user <jdbc user> --password <jdbc password> --table <table to upgrade data from> --colums <pers_key column name> <pers_val column name>
+#Linux/OSX
+java -cp <path_to_jdbc_driver>:build/libs/upgradeTool-0.1.jar com.caplin.upgradetool.UpgradeTool --driver <driverName> --url <jdbc url> --user <jdbc user> --password <jdbc password> --table <table to upgrade data from> --columns <pers_key column name> <pers_val column name>
+#Windows
+java -cp <path_to_jdbc_driver>;build/libs/upgradeTool-0.1.jar com.caplin.upgradetool.UpgradeTool --driver <driverName> --url <jdbc url> --user <jdbc user> --password <jdbc password> --table <table to upgrade data from> --columns <pers_key column name> <pers_val column name>
 ```
 
 ## Notes
